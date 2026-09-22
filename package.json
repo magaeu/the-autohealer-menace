@@ -1,0 +1,21 @@
+{
+  "name": "the-autohealer-menace",
+  "version": "1.0.0",
+  "description": "An example project to demonstrate the Autohealer agent for Playwright.",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magaeu/the-autohealer-menace.git"
+  },
+  "keywords": [],
+  "author": "Marcela Oliveira",
+  "bugs": {
+    "url": "https://github.com/magaeu/the-autohealer-menace/issues"
+  },
+  "homepage": "https://github.com/magaeu/the-autohealer-menace#readme",
+  "devDependencies": {
+    "@playwright/cli": "^0.1.21",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.2"
+  }
+}
