@@ -15,20 +15,27 @@
         ],
         "paths": {
             "@fixtures/*": [
-                "./fixtures/*"
+                "./src/fixtures/*"
+            ],
+            "@pages/*": [
+                "./src/pages/*"
+            ],
+            "@tests/*": [
+                "./src/tests/*"
             ],
             "@utils/*": [
-                "./utils/*"
+                "./src/utils/*"
             ]
         }
     },
     "include": [
         "*.ts",
         "*.mts",
-        "fixtures/**/*.ts",
-        "tests/**/*.ts",
-        "types/**/*.ts",
-        "utils/**/*.ts"
+        "src/fixtures/**/*.ts",
+        "src/pages/**/*.ts",
+        "src/tests/**/*.ts",
+        "src/types/**/*.ts",
+        "src/utils/**/*.ts"
     ],
     "exclude": [
         "node_modules",

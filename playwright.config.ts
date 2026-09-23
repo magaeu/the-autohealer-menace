@@ -1,16 +1,17 @@
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
-  testDir: './tests',
+  testDir: './src/tests',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: [
-    ['json', { outputFile: './report/report.json' }],
-    ['html', { outputDir: './report' }]
+    ['json', { outputFile: './reports/report.json' }],
+    ['html', { outputDir: './reports' }]
   ],
   use: {
+    baseURL: 'https://practice.expandtesting.com/',
     testIdAttribute: 'id',
     headless: true,
     screenshot: 'only-on-failure',

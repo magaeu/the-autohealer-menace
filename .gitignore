@@ -107,6 +107,7 @@ vite.config.ts.timestamp-*
 # Playwright
 /test-results/
 /report/
+/reports/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
