@@ -1,16 +1,16 @@
 import { Locator, Page } from "@playwright/test";
+import { SelfHealBasePage } from "./selfheal.base.page";
 
-export class LoginPage {
-    private readonly page: Page;
-    private readonly userNameField: Locator;
-    private readonly passwordField: Locator;
-    private readonly loginButton: Locator;
+export class LoginPage extends SelfHealBasePage {
+    private readonly userNameField: string;
+    private readonly passwordField: string;
+    private readonly loginButton: string;
 
     constructor(page: Page) {
-        this.page = page;
-        this.userNameField = this.page.getByTestId('username');
-        this.passwordField = this.page.getByTestId('password');
-        this.loginButton = this.page.getByTestId('submit-login');
+        super(page);
+        this.userNameField = '#username';
+        this.passwordField = '#wrong-password';
+        this.loginButton = '#submit-login';
     }
 
     async goTo(): Promise<LoginPage> {
@@ -24,17 +24,17 @@ export class LoginPage {
     }
 
     async fillUserName(userName: string): Promise<void> {
-        await this.userNameField.fill(userName);
+        await this.fill(this.userNameField, userName);
     }
 
 
     async fillPassword(password: string): Promise<void> {
-        await this.passwordField.fill(password);
+        await this.fill(this.passwordField, password);
     }
 
 
     async clickLogin(): Promise<void> {
-        await this.loginButton.click();
+        await this.click(this.loginButton);
     }
 
 

@@ -14,6 +14,9 @@
             "@playwright/test"
         ],
         "paths": {
+            "@core/*": [
+                "./src/core/*"
+            ],
             "@fixtures/*": [
                 "./src/fixtures/*"
             ],
@@ -23,6 +26,9 @@
             "@tests/*": [
                 "./src/tests/*"
             ],
+            "@types/*": [
+                "./src/types/*"
+            ],
             "@utils/*": [
                 "./src/utils/*"
             ]
@@ -31,6 +37,7 @@
     "include": [
         "*.ts",
         "*.mts",
+        "src/core/**/*.ts",
         "src/fixtures/**/*.ts",
         "src/pages/**/*.ts",
         "src/tests/**/*.ts",
